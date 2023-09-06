@@ -15,7 +15,7 @@ E ricordiamoci che console.log() è nostro amico! */
 
 
 
-//milestone 1
+//milestone 0
 const team = [
     {nome: "Wayne Barnett", ruolo: "Founder & CEO", foto: "./assets/img/wayne-barnett-founder-ceo.jpg"},
     {nome: "Angela Caroll", ruolo: "Chief Editor", foto: "./assets/img/angela-caroll-chief-editor.jpg"},
@@ -24,3 +24,29 @@ const team = [
     {nome: "Scott Estrada", ruolo: "Developer", foto: "./assets/img/scott-estrada-developer.jpg"},
     {nome: "Barbara Ramos", ruolo: "Graphic Designer", foto: "./assets/img/barbara-ramos-graphic-designer.jpg"}
  ];
+
+ //milestone 1
+console.log(team);
+
+//milestone 2
+//selezione elemento dom
+const DomEl = document.querySelector(".row");
+
+//funzione for
+for (let i = 0; i < team.length; i++) {
+    const membro = team[i];
+    const markupEl =
+    `<div class="col-12 col-md-4">
+       <div class="card border-0 shadow bg-primary-subtle">
+          <img src="${membro["foto"]}" class="card-img-top rounded-end-circle">
+          <div class="card-body">
+             <h3 class="card-title">${membro["nome"]}</h3>
+             <div class="card-text">${membro["ruolo"]}</div>
+          </div>
+       </div>
+    </div>`;
+    
+    //stamparlo con insertadjcenhtml
+    DomEl.insertAdjacentHTML("beforeend", markupEl);
+ 
+ }
