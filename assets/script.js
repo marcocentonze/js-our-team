@@ -26,13 +26,17 @@ const team = [
  ];
 
  //milestone 1
-console.log(team);
+//for in per visualizzare ogni singola stringa
+ for(let key in team) {
+    console.log(team[key]);
+ }
 
-//milestone 2
+//milestone 2 
 //selezione elemento dom
 const DomEl = document.querySelector(".row");
 
 //funzione for
+
 for (let i = 0; i < team.length; i++) {
     const membro = team[i];
     const markupEl =
